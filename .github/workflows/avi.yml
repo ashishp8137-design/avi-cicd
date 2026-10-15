@@ -1,0 +1,14 @@
+# This Name will display on github Actions TAB.
+name: AVI-CICD
+on: 
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Hello How Are You
+       run: echo "I'm Good"
+  
