@@ -15,7 +15,7 @@ jobs:
       - name: Father Name
         run: echo "Ashish Kumar"
       - name: Mother Name
-        run: echo"Suman Patel"
+        run: echo "Suman Patel"
   Address:
     needs: [family-details,greet]
     runs-on: ubuntu-latest
