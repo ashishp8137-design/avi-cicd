@@ -1,14 +1,30 @@
-# This Name will display on github Actions TAB.
-name: AVI-CICD
-on: 
-  push:
-    branches: [main]
-  workflow_dispatch:
-
+# This Name will show on Github Actions TAB.
+name: ashish-avi
+on:
+    workflow_dispatch:
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-     - name: Hello How Are You
-       run: echo "I'm Good"
-  
+      - name: Greeting From
+        run: echo "I'm Avi Patel from My side Welcome to in Avi Techonology"
+  family-details:
+    needs: [greet]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Father Name
+        run: echo "Ashish Kumar"
+      - name: Mother Name
+        run: echo"Suman Patel"
+  Address:
+    needs: [family-details,greet]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Village Name
+        run: echo " Balkaranpur Madhav Nagar Bigahia"
+      - name: Post Office
+        run: echo "Madhav Nagar Bigahia"
+      - name: District Name
+        run: echo "Prayagraj"
+      - name: State Name
+        run: echo "Uttar Pradesh"
